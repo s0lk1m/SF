@@ -75,3 +75,57 @@ def korean_age(a):
     return age
 
        
+#4.3.1
+def read_date(today):
+    year, month, day = tuple(map(int, today.split(' ')))
+
+    return year, month, day
+
+def print_today(date):
+    year, month, day = date
+    print(month, '/', day, '/', year)
+
+def print_tomorrow(date):
+    year, month, day = date
+    
+    if month == 2 and day == 28 :
+        month += 1
+        day = 1
+    elif (month % 2 != 0 and day == 31) or (month % 2 == 0 and day == 30):
+        if month == 12:
+            year += 1
+            month = 1
+            day =1
+        else:
+            month += 1
+            day = 1
+    else:
+        day+= 1
+
+    print(month,'/',day,'/',year)
+
+
+
+day = read_date(input())
+print_today(day)
+print_tomorrow(day)
+
+
+#4.4.1
+def korean_number(num):
+    d = {0: '영', 1: '일', 2: '이', 3: '삼', 4: '사', 5: '오', 6: '육', 7: '칠', 8: '팔', 9: '구'}
+    return d[num]
+    
+#4.4.2
+txt= txt.splitlines()
+dic = {}
+
+finding_eng = lambda x: 65 <= ord(x) <=90 or 97 <= ord(x) <=122
+
+for L in txt:
+    i = 0
+    while not finding_eng(L[i]):
+            i += 1
+    else:
+        ko, en = L[:i-1], L[i:]
+        dic[ko] = en
