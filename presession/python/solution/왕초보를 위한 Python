@@ -129,3 +129,17 @@ for L in txt:
     else:
         ko, en = L[:i-1], L[i:]
         dic[ko] = en
+
+
+#5.2.3
+import tkinter as tk
+import calendar
+
+c = calendar.TextCalendar()
+m = c.formatmonth(2021, 20)
+
+root = tk.Tk()
+t = tk.Text(root, height=5, width=10)
+t.insert(tk.END, m)
+t.pack()
+tk.mainloop()
