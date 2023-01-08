@@ -32,6 +32,18 @@ while True :
             sum = sum + num
         else:
             break
+            
+#step 3 연습문제
+
+#중간값 찾기
+n = int(input())
+numbers =list(input().split())
+numbers.sort()
+
+
+n = n // 2
+print(numbers[n])
+
 
 print(sum) 
 
