@@ -199,3 +199,12 @@ num = sorted(num, key=int)
 n = n//2
 print(num[n])
 
+#자릿수 더하기
+a = input()
+a = list(a)
+sum = 0
+ 
+for i in a:
+    sum = int(i) + sum
+ 
+print(sum)
