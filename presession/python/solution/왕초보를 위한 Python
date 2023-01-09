@@ -208,3 +208,14 @@ for i in a:
     sum = int(i) + sum
  
 print(sum)
+
+
+
+# 최댓값 구하기
+tests = int(input())
+
+for i in range(tests):
+    num_list = input().split()
+    num_list= sorted(num_list, key=int)
+    print(f"#{i+1}", num_list[9])
+
