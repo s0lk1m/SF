@@ -219,3 +219,15 @@ for i in range(tests):
     num_list= sorted(num_list, key=int)
     print(f"#{i+1}", num_list[9])
 
+#평균값 구하기
+tests = int(input())
+avg = 0
+sum= 0
+
+for i in range(tests):
+    num_list = input().split()
+    for j in range(10):
+        sum += int(num_list[0])
+    avg = int(sum / 10)
+    print(f'#{i} {avg}')
+
